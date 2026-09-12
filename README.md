@@ -1,4 +1,4 @@
-# openclaw
+# CoreClaw
 
 To install dependencies:
 
