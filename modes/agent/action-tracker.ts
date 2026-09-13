@@ -23,7 +23,7 @@ export class ActionTracker {
         return action;
     }
 
-    getAction():readonly ActionLog[]{
+    getActions():readonly ActionLog[]{
         return this.actions;
     }
 
