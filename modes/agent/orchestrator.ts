@@ -10,7 +10,7 @@ import { renderTerminalMarkdown } from "../../tui/terminal-md";
 import { runApprovalFlow } from "./approval";
 
 export async function runAgentMode() {
-    console.log(chalk.bold('\n Agent Mode\n'));
+    console.log(chalk.bold('\n🤖 Agent Mode\n'));
 
     const goal = await text({
         message: "What would you like the agent to do?",
