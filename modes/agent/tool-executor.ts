@@ -424,4 +424,9 @@ export class ToolExecutor {
 
         return { errors };
     }
+
+    clearString():void{
+        this.overlay.clear()
+        this.deleted.clear()
+    }
 }
