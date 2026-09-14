@@ -425,7 +425,7 @@ export class ToolExecutor {
         return { errors };
     }
 
-    clearString():void{
+    clearStaging():void{
         this.overlay.clear()
         this.deleted.clear()
     }

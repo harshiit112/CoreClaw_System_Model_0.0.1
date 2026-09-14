@@ -51,7 +51,7 @@ export async function runAgentMode() {
     if (result.text?.trim()) console.log(renderTerminalMarkdown(result.text));
 
     const ok = await runApprovalFlow(tracker);
-    if (!ok) return executor.clearString()
+    if (!ok) return executor.clearStaging()
 
     const { errors } = executor.applyApprovedFromTracker();
 
@@ -62,5 +62,5 @@ export async function runAgentMode() {
     else {
         console.log(chalk.green('\n✓ Applied.\n'));
     }
-    executor.clearString()
+    executor.clearStaging()
 }

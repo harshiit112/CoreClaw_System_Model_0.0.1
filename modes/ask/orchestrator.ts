@@ -132,8 +132,8 @@ export async function runAskMode() {
     // @ts-ignore
     executor.createFile(filename , asMd(question, answer));
     const ok = await runApprovalFlow(tracker);
-    if(!ok) return executor.clearString();
+    if(!ok) return executor.clearStaging();
 
     executor.applyApprovedFromTracker();
-    executor.clearString();
+    executor.clearStaging();
 }
