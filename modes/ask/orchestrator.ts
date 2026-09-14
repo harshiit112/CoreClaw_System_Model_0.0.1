@@ -9,6 +9,7 @@ import { defaultAgentConfig } from "../agent/types";
 import { renderTerminalMarkdown } from "../../tui/terminal-md";
 import { runApprovalFlow } from "../agent/approval";
 import { fa } from "zod/v4/locales";
+import { createWebTools } from "../plan/web-tools";
 
 function createAskTools(executor: ToolExecutor) {
     return {
@@ -96,6 +97,7 @@ export async function runAskMode() {
 
     const tools = {
         ...createAskTools(executor),
+        ...createWebTools(tracker)
     }
 
     const agent = new ToolLoopAgent({
