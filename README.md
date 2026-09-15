@@ -4,6 +4,17 @@ CoreClaw is a terminal and Telegram coding assistant for working with a local co
 
 The project runs on [Bun](https://bun.sh/) and is written in TypeScript. Its entry point is an interactive `wakeup` command that lets you choose a local CLI workflow or a Telegram bot.
 
+## Built With
+
+<p>
+	<a href="https://bun.sh/"><img src="https://img.shields.io/badge/Bun-1.4+-000000?style=for-the-badge&logo=bun&logoColor=white" alt="Bun"></a>
+	<a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-ESNext-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"></a>
+	<a href="https://ai-sdk.dev/"><img src="https://img.shields.io/badge/Vercel_AI_SDK-Tool_Agents-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel AI SDK"></a>
+	<a href="https://openrouter.ai/"><img src="https://img.shields.io/badge/OpenRouter-LLM_Gateway-6E56CF?style=for-the-badge" alt="OpenRouter"></a>
+	<a href="https://core.telegram.org/bots/api"><img src="https://img.shields.io/badge/Telegram-Bot-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Bot API"></a>
+	<a href="https://www.firecrawl.dev/"><img src="https://img.shields.io/badge/Firecrawl-Web_Research-FF6B35?style=for-the-badge" alt="Firecrawl"></a>
+</p>
+
 ## What It Can Do
 
 | Mode | Purpose | Can modify files? |
@@ -240,20 +251,19 @@ All AI workflows
 
 ### Runtime dependencies
 
-| Package | Role in CoreClaw |
+| Technology / package | Role in CoreClaw |
 | --- | --- |
-| `@clack/core` | Core primitives used by the interactive prompt stack. |
-| `@clack/prompts` | Select menus, text input, confirmation, and multiselect prompts. |
-| `@mendable/firecrawl-js` | Web search and webpage crawling for optional research tools. |
-| `@openrouter/ai-sdk-provider` | Connects the Vercel AI SDK to OpenRouter models. |
-| `ai` | `ToolLoopAgent`, text generation, tools, step limits, structured output, and model middleware. |
-| `chalk` | Colored and styled terminal output. |
-| `commander` | Top-level command parsing and the `wakeup` command. |
-| `diff` | Produces text diffs for proposed file changes. |
-| `figlet` | Renders the startup banner. |
-| `marked` | Parses Markdown. |
-| `marked-terminal` | Renders Markdown for terminal output. |
-| `telegraf` | Telegram bot polling, command handlers, callbacks, and replies. |
+| 🧭 `@clack/prompts` | Select menus, text input, confirmation, and multiselect prompts. |
+| 🔥 `@mendable/firecrawl-js` | Web search and webpage crawling for optional research tools. |
+| 🧠 `@openrouter/ai-sdk-provider` | Connects the Vercel AI SDK to OpenRouter models. |
+| 🤖 `ai` | `ToolLoopAgent`, text generation, tools, step limits, structured output, and model middleware. |
+| 🎨 `chalk` | Colored and styled terminal output. |
+| 🖥️ `commander` | Top-level command parsing and the `wakeup` command. |
+| 📝 `diff` | Produces text diffs for proposed file changes. |
+| ✨ `figlet` | Renders the startup banner. |
+| 📄 `marked` | Parses Markdown. |
+| 📟 `marked-terminal` | Renders Markdown for terminal output. |
+| ✈️ `telegraf` | Telegram bot polling, command handlers, callbacks, and replies. |
 
 ### TypeScript and development packages
 
