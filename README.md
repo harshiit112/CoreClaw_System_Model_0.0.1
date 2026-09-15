@@ -1,19 +1,42 @@
+<div align="center">
+
 # CoreClaw
 
-CoreClaw is a terminal and Telegram coding assistant for working with a local codebase. It uses an OpenRouter-hosted language model to inspect files, answer questions, research tasks, create implementation plans, and stage code changes for explicit approval before they are applied.
+### A local-first coding agent for your terminal and Telegram
 
-The project runs on [Bun](https://bun.sh/) and is written in TypeScript. Its entry point is an interactive `wakeup` command that lets you choose a local CLI workflow or a Telegram bot.
-
-## Built With
+Inspect code. Ask questions. Build plans. Stage changes. Approve with confidence.
 
 <p>
-	<a href="https://bun.sh/"><img src="https://img.shields.io/badge/Bun-1.4+-000000?style=for-the-badge&logo=bun&logoColor=white" alt="Bun"></a>
-	<a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-ESNext-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"></a>
-	<a href="https://ai-sdk.dev/"><img src="https://img.shields.io/badge/Vercel_AI_SDK-Tool_Agents-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel AI SDK"></a>
-	<a href="https://openrouter.ai/"><img src="https://img.shields.io/badge/OpenRouter-LLM_Gateway-6E56CF?style=for-the-badge" alt="OpenRouter"></a>
-	<a href="https://core.telegram.org/bots/api"><img src="https://img.shields.io/badge/Telegram-Bot-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Bot API"></a>
-	<a href="https://www.firecrawl.dev/"><img src="https://img.shields.io/badge/Firecrawl-Web_Research-FF6B35?style=for-the-badge" alt="Firecrawl"></a>
+  <a href="https://bun.sh/"><img src="https://img.shields.io/badge/Bun-1.4+-000000?style=for-the-badge&logo=bun&logoColor=white" alt="Bun"></a>
+  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-ESNext-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"></a>
+  <a href="https://ai-sdk.dev/"><img src="https://img.shields.io/badge/Vercel_AI_SDK-Tool_Agents-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel AI SDK"></a>
+  <a href="https://openrouter.ai/"><img src="https://img.shields.io/badge/OpenRouter-LLM_Gateway-6E56CF?style=for-the-badge" alt="OpenRouter"></a>
+  <a href="https://core.telegram.org/bots/api"><img src="https://img.shields.io/badge/Telegram-Bot-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Bot API"></a>
+  <a href="https://www.firecrawl.dev/"><img src="https://img.shields.io/badge/Firecrawl-Web_Research-FF6B35?style=for-the-badge" alt="Firecrawl"></a>
 </p>
+
+</div>
+
+CoreClaw is a TypeScript coding assistant powered by an OpenRouter-hosted model. It works against the directory where it is launched, keeps mutations staged in memory, and asks for approval before applying changes.
+
+> **Start here:** `bun install` then `bun run index.ts wakeup`
+
+<details>
+<summary><strong>On this page</strong></summary>
+
+- [What It Can Do](#what-it-can-do)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Running CoreClaw](#running-coreclaw)
+- [CLI Workflows](#cli-workflows)
+- [Telegram Commands](#telegram-commands)
+- [Workspace Safety](#workspace-safety)
+- [Architecture](#architecture)
+- [Project Layout](#project-layout)
+- [Libraries](#libraries)
+- [Troubleshooting](#troubleshooting)
+
+</details>
 
 ## What It Can Do
 
