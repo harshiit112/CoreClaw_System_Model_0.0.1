@@ -24,7 +24,12 @@ function agentOptions(config: AgentConfig, maxSteps: number) {
     return {
         model: getAgentModel(),
         stopWhen: stepCountIs(maxSteps),
-        instructions: `Workspace root: ${config.codebasePath}`,
+        instructions: [
+            `Workspace root: ${config.codebasePath}`,
+            "Before changing a file, read it with read_file to confirm the current contents.",
+            "Use write_file for file updates. It modifies an existing file and creates a new file only when the path does not exist.",
+            "Do not use create_file for an existing file.",
+        ].join("\n"),
     };
 }
 

@@ -139,6 +139,12 @@ export class ToolExecutor {
         return `Staged update: ${key}`;
     }
 
+    writeFile(rel: string, content: string): string {
+        const existing = this.getEffectiveText(rel);
+        if (existing === undefined) return this.createFile(rel, content);
+        return this.modifyFile(rel, content);
+    }
+
     deleteFile(rel: string): string {
         if (!this.config.tools.allowFileModification)
             throw new Error("File deletion disabled");

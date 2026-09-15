@@ -7,7 +7,6 @@ export function createAgentTools(executor: ToolExecutor) {
         read_file: tool({
             description:
                 "Read a text file from the workspace. Use a path relative to the project root.",
-
             inputSchema: z.object({
                 path: z.string().describe("Relative file path")
             }),
@@ -32,6 +31,16 @@ export function createAgentTools(executor: ToolExecutor) {
                 content: z.string().describe("Complete new file contents"),
             }),
             execute: async ({ path: p, content }) => executor.modifyFile(p, content),
+        }),
+
+        write_file: tool({
+            description:
+                "Write the complete contents to a workspace file. Modify the existing file when it exists; create it when it does not. Changes remain staged until approval.",
+            inputSchema: z.object({
+                path: z.string(),
+                content: z.string().describe("Complete new file contents"),
+            }),
+            execute: async ({ path: p, content }) => executor.writeFile(p, content),
         }),
 
         delete_file: tool({
