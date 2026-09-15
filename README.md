@@ -1,6 +1,6 @@
 <div align="center">
 
-# CoreClaw
+# CoreClaw-Model 🤖
 
 ### A local-first coding agent for your terminal and Telegram
 
